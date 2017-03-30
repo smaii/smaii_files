@@ -1,0 +1,43 @@
+@charset "utf-8";
+/* CSS Document */
+html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,img,input{margin:0 auto;padding:0;}
+body{color:#a0a0a0;font:12px "微软雅黑";word-wrap:break-word;}
+
+a{text-decoration:none;color:#555;}
+a:hover{color:#555;}
+li{list-style:none;}
+
+img{display:block;vertical-align:middle;}
+a img,fieldset{border:0;}
+textarea{resize:none;}/*文本框大小固定*/
+/*input,textarea,select{outline:none;}*//*--去除边框光>晕*/
+
+/*--------------------------------------------------------------*/
+
+.over{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+.vertical{height:100%;width:0;vertical-align:middle;display: inline-bolock;}
+.border0{border:0;}
+.left{float:left;}
+.right{float:right;}
+.clearx{clear:both;}
+.clear{zoom:1;}
+.clear:after{content:"";clear:both;display:block;overflow:hidden;visibility:hidden;}
+.hand{cursor:pointer;}
+.ind2{text-indent:2em} 
+
+
+
+
+
+
+
+/*--i,em{font-style:normal}去倾斜*/
+/*--b,strong,th,h1,h2,h3,h4,h5,h6{font-weight:100;}去加粗*/
+
+
+
+
+
+
+
+

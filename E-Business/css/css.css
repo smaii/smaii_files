@@ -1,0 +1,505 @@
+
+
+body
+{
+    overflow-x: hidden;
+}
+body #container,
+#main,
+#gifts
+{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+/*tab切换*/
+#tab ul
+{
+    overflow: hidden;
+
+    height: 32px;
+
+    text-align: center;
+
+    border-top: solid 1px #eee;
+    border-bottom: solid 1px #999;
+    position: relative;
+}
+#tab ul li
+{
+    float: left;
+
+    margin-right: 36px;
+}
+#tab ul li._first
+{
+    margin-left: 19%;  /*宽度自适应如何解决？*/
+
+    background: url('../images/navHot.gif') no-repeat right top;
+}
+
+#tab ul li a
+{
+    font: 900 14px/32px '';
+
+    float: left;
+
+    padding-right: 20px;
+
+    color: #001a33;
+}
+#tab ul li:hover a{
+    color: #f5614d;
+}
+
+#main
+{
+    position: relative;
+}
+#main #banner
+{
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    /*轮播图*/
+
+    width: 820px;
+    height: 460px;
+    margin-left: -430px;
+
+    cursor: pointer;
+
+    opacity: 0.3;
+    background-color: pink;
+}
+
+#main #banner img{
+    position: absolute;
+    width: 73px;
+    height: 65px;
+    top: 50%;
+    margin-top: -32px;
+    opacity: 0.5;
+    display: none;
+}
+
+#main #banner img._left{
+    left: 50px;
+}
+
+#main #banner img._right{
+    right: 50px;
+}
+
+#main #banner #menu02
+{
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    left: -20px;
+
+    width: 120px;
+    height: 418px;
+
+    opacity: 0.85;
+    border: solid 1px #eee;
+    background-color: #fff;
+
+    filter: alpha(opacity=85);
+    padding: 20px;
+    display: none;
+}
+#main #banner #menu02 li{
+    margin-bottom: 20px;
+    font:14px/20px "微软雅黑";
+    color: #666;
+    width: 120px;
+    cursor: pointer;
+    height: 20px;
+}
+#main #banner #menu02 li:hover{
+    background: #999;
+    color: #fff;
+}
+
+#main #banner-click
+{
+    position: absolute;
+    z-index: 9;
+    top: 455px;
+    left: 50%;
+
+    width: 92px;
+    height: 18px;
+    margin-left: -66px;
+}
+
+#main #banner-click span
+{
+    display: inline-block;
+
+    width: 11px;
+    height: 11px;
+    margin-right: 9px;
+
+    border-radius: 50% 50%;
+    background-color: #747173;
+}
+
+#main #banner-click span:hover
+{
+    cursor: pointer;
+
+    background-color: red;
+}
+
+#main .left
+{
+    width: 150px;
+}
+
+#main .left h2{
+    font: 900 16px/24px "微软雅黑";
+    color: #000;
+    margin-top: 20px;
+}
+
+#main .left table{
+    border-spacing:15px 5px;
+    margin-left: -15px;
+}
+#main .left ._h{
+    border-top: solid 1px #eee;
+    padding-top: 15px;
+}
+
+#main .left #menu01 li{
+    padding-left: 30px;
+    height: 30px;
+    font:16px/30px "";
+    color: #666;
+    cursor: pointer;
+    background: url("../images/pic6.jpg") no-repeat 5px center;
+}
+#main .left #menu01 li:hover{
+    background: url("../images/menu.png") no-repeat -5px -5px;
+    background-color: #e44715;
+    color: #fff;
+
+}
+
+
+
+#main > .right img
+{
+    margin-top: 25px;
+}
+#main > .right img.img2
+{
+    margin: 0;
+    margin-top: 20px;
+}
+
+#right-fix
+{
+    position: fixed;
+    top: 55%;
+    right: 10px;
+
+    width: 38px;
+
+    text-align: center;
+}
+#right-fix li
+{
+    float: left;
+
+    width: 32px;
+    height: 32px;
+    margin-bottom: 10px;
+    padding: 2px;
+
+    border: solid 1px #ddd;
+    background: #eee;
+}
+
+#right-fix li.first
+{
+    padding-top: 35px;
+
+    cursor: pointer;
+
+    background: url('../images/light.png') no-repeat center top;
+    background-color: #eee;
+}
+#right-fix li.top{
+    display: none;
+}
+
+#right-fix li:hover a
+{
+    color: #e00;
+    cursor: pointer;
+}
+
+#right-fix li .code
+{
+    position: fixed;
+    top: 70%;
+    right: 70px;
+
+    display: none;
+
+    padding: 0;
+
+    border: 0;
+    box-shadow: 2px 0 2px #aaa;
+}
+#right-fix li.last:hover .code
+{
+    display: block;
+}
+
+
+/*爆款推荐*/
+
+#container-gifts{
+
+    background: #f5f5f5;
+    height: 100%;
+    width:100%;
+}
+
+#gifts
+{
+    padding-top: 40px;
+
+}
+
+#gifts #hot-gifts h3
+{
+    font: 900 22px/26px '宋体';
+
+    height: 26px;
+    padding-bottom: 20px;
+
+    text-align: left;
+
+    color: #000;
+}
+
+#gifts #hot-gifts h3 span
+{
+    font: 300 12px/14px '';
+
+    padding-left: 10px;
+
+    text-align: bottom;
+
+    color: #a1a1a1;
+}
+
+#gifts #hot-gifts .list li
+{
+    float: left;
+
+    width: 285px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+#gifts #hot-gifts .list li.special
+{
+    margin-right: 0;
+}
+
+#gifts #hot-gifts .list li img
+{
+    width: 285px;
+    height: 280px;
+}
+#gifts #hot-gifts .list p
+{
+    font: 22px/30px '';
+
+    height: 30px;
+    padding-top: 4px;
+
+    color: #999;
+}
+
+#gifts #hot-gifts .list p > span
+{
+    font: 12px/12px '';
+
+    padding-top: 4px;
+
+    color: #ccc;
+}
+
+
+#gifts #hot-gifts .list > span
+{
+    font: 16px/19px '';
+
+    height: 19px;
+}
+
+
+/*生日礼物*/
+
+#nav .item{
+    width: 1200px;
+    background: #fff;
+}
+#nav .item li
+{
+    font: 900 16px/46px '微软雅黑';
+
+    float: left;
+
+    width: 128px;
+    height: 46px;
+    margin-top: 30px;
+
+    text-align: center;
+
+    background: #fff;
+}
+
+#nav .item li:hover
+{
+    background: #e44715;
+}
+#nav .item li:hover a
+{
+    color: #fff;
+    background: #e44715;
+}
+#nav .item li.bgc{
+    background: #e44715;
+}
+#nav .item li.bgc a{
+    background: #e44715;
+    color: #fff;
+}
+#nav .item li a
+{
+    color: #666;
+}
+
+    /*布局相近或相同，分组选择复写*/
+#gifts #birthday-gifts h1,
+#gifts #new-gifts h1,
+#gifts #to-girlfriend h1,
+#gifts #to-boyfriend h1,
+#gifts #double-gifts h1
+{
+    font: 900 30px/36px '';
+
+    margin: 30px 0;
+
+    color: #000;
+}
+
+
+#gifts #birthday-gifts .list li,
+#gifts #new-gifts .list li,
+#gifts #to-girlfriend .list li,
+#gifts #to-boyfriend .list li,
+#gifts #double-gifts .list li
+{
+    float: left;
+
+    width: 280px;
+    height: 369px;
+    margin-right: 26px;
+    margin-bottom: 25px;
+
+    box-shadow: 1px 1px 1px #ccc;
+    background-color: #fff;
+}
+
+#gifts #birthday-gifts .list li.special,
+#gifts #new-gifts .list li.special,
+#gifts #to-girlfriend .list li.special,
+#gifts #to-boyfriend .list li.special,
+#gifts #double-gifts .list li.special
+{
+    margin-right: 0;
+}
+#gifts #birthday-gifts .list li.first,
+#gifts #new-gifts .list li.first,
+#gifts #to-girlfriend .list li.first,
+#gifts #to-boyfriend .list li.first,
+#gifts #double-gifts .list li.first
+{
+    width: 586px;
+    height: 369px;
+}
+
+#gifts #birthday-gifts .list li img,
+#gifts #new-gifts .list li img,
+#gifts #to-girlfriend .list li img,
+#gifts #to-boyfriend .list li img,
+#gifts #double-gifts .list li img
+{
+    width: 280px;
+}
+#gifts #birthday-gifts .list li.first img,
+#gifts #new-gifts .list li.first img,
+#gifts #to-girlfriend .list li.first img,
+#gifts #to-boyfriend .list li.first img,
+#gifts #double-gifts .list li.first img
+{
+    width: 586px;
+    height: 369px;
+}
+#gifts #birthday-gifts .list li:hover,
+#gifts #new-gifts .list li:hover,
+#gifts #to-girlfriend .list li:hover,
+#gifts #to-boyfriend .list li:hover,
+#gifts #double-gifts .list li:hover
+{
+    box-shadow: 1px 1px 1px #999;
+}
+
+#gifts #birthday-gifts .list li p,
+#gifts #new-gifts .list li p,
+#gifts #to-girlfriend .list li p,
+#gifts #to-boyfriend .list li p,
+#gifts #double-gifts .list li p
+{
+    font: 20px/24px '';
+
+    height: 24px;
+    padding: 24px 20px 0;
+
+    color: #666;
+}
+
+#gifts #birthday-gifts .list li p > span,
+#gifts #new-gifts .list li p > span,
+#gifts #to-girlfriend .list li p > span,
+#gifts #to-boyfriend .list li p > span,
+#gifts #double-gifts .list li p > span
+{
+    font: 10px/24px '';
+
+    color: #ccc;
+}
+
+
+#gifts #birthday-gifts .list li > span,
+#gifts #new-gifts .list li > span,
+#gifts #to-girlfriend .list li > span,
+#gifts #to-boyfriend .list li > span,
+#gifts #double-gifts .list li > span
+{
+    font: 12px/22px '';
+
+    height: 22px;
+    padding: 0 20px;
+}
+

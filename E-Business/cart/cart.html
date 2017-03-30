@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>cart</title>
+	<script src="../public/jquery-1.7.2.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../public/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+	<link rel="stylesheet" type="text/css" href="../public/public.css">
+	<style type="text/css">
+		#main{
+			height: 1000px;
+			width: 100%;
+			background: url(images/cart.png) no-repeat left top;
+			position: relative;
+		}
+		#main .val{
+			background: url(images/val.jpg);
+			width: 1002px;
+			height: 367px;
+			position: absolute;
+			top:80px;
+			left: 180px;
+		}
+
+
+		#main .bg{
+			position: absolute;
+			display: none;
+			height: 239px;
+			width: 1010px;
+			background: url(images/bg.png);
+			top:80px;
+			left: 180px;
+		}
+
+		#main .val ul {
+		    border:solid 1px #aaa;
+		    float: left;
+		    position: absolute;
+		    top: 180px;
+		    left: 525px;
+		}
+		#main .val ul li{
+		    float: left;
+		    height: 24px;
+		    width: 28px;
+		    background: #f0f0f0;
+		    text-align: center;
+		    font:8px/24px "";
+		    color: #666;
+		    border-left: solid 1px #aaa;
+		}
+		#main .val ul li.sec{
+		    width: 40px;
+		    background: #fff;
+		}
+		#main .val ul li.first{
+		    border:0;
+		}
+		#main .val ul li:hover{
+		    color: #e00;
+		    cursor: pointer;
+		}
+		#main .val ul li.sec:hover{
+		    color: #666;
+		    cursor: default;
+		}
+		#main .val .money{
+			color: red;
+			display: block;
+			position: absolute;
+			top: 180px;
+			left: 680px;
+			height: 24px;
+			width: 40px;
+			text-align: center;
+			font:16px/24px "微软雅黑";
+
+		}
+		#main .val .del{
+			position: absolute;
+			left: 867px;
+			top: 185px;
+			height:20px;
+			width: 25px;
+			cursor: pointer;
+		}
+		#main .total{
+			height: 30px;
+			width: 70px;
+			font: 18px/30px "微软雅黑";
+			color: red;
+			position: absolute;
+			top: 270px;
+			right: 20px;
+			text-align: center;
+		}
+		#main .bg a{
+			display: block;
+			height: 20px;
+			width: 25px;
+			position: absolute;
+			top: 150px;
+			left: 420px;
+		}
+		#main #back{
+			height: 80px;
+			width: 80px;
+			display: block;
+			position: absolute;
+			top: 10px;
+			left: 180px;
+		}
+	</style>
+	<script type="text/javascript">
+		$(function(){
+			//读取cookie
+			var $num=$.cookie("num");
+			console.log($num);
+			function getNum(){
+				$("#val").text($num);
+				$("#main .val .money").text($num*159);
+				$("#main .total").text("￥"+$num*159);
+			}
+			getNum();
+			
+			//获取数量
+			$("#cut").click(function(){
+				if($num>1){
+					$num--;
+					$.cookie("num",$num,{expires:7,path:"/"});//实时存储cookie数据
+					getNum();
+				}
+			});
+			$("#add").click(function(){
+				$num++;
+				$.cookie("num",$num,{expires:7,path:"/"});//实时存储cookie数据
+				getNum();
+			});
+
+			//点击删除
+			$("#main .del").click(function(){
+				$("#main .val").remove();
+				$("#main .bg").show();
+			});
+
+		});
+
+		
+
+	</script>
+</head>
+<body>
+
+	<div id="main">
+		<div class="val">
+			<ul class="clear">
+				<li class="first" id="cut">-</li>
+				<li class="sec" id="val">1</li>
+				<li id="add">+</li>
+			</ul>
+			<span class="money">166</span>
+			<p class="del"></p>
+			<div class="total">166</div>
+
+		</div>
+		<div class="bg">
+			<a href="../index.html"></a>
+		</div>
+		<a id="back" href="../index.html">
+		</a>
+
+	</div>
+
+
+</body>
+</html>

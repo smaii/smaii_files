@@ -1,0 +1,356 @@
+/*public头部：*/
+
+#page_mask  /*遮罩*/
+{
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+
+    display: none;
+
+    width: 100%;
+    height: 100%;
+
+    opacity: .2;
+    background-color: #777;
+
+    filter: alpha(opacity=50);
+}
+
+body
+{
+    overflow-x: hidden;
+}
+body #container
+{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#head
+{
+    position: relative;
+}
+#head img
+{
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+}
+
+#head .left
+{
+    position: absolute;
+    left: 150px;
+
+    width: 204px;
+}
+
+#head ul li
+{
+    font: 12px/24px '';
+
+    float: left;
+
+    margin-left: 16px;
+}
+
+#head .left b
+{
+    font: 12px/24px '';
+    font-weight: 300;
+
+    cursor: pointer;
+
+    color: #a0a0a0;
+}
+
+#head .left b:hover,
+#head .right li:hover,
+#head .right li:hover a
+{
+    color: #f4604b;
+}
+
+#head .right li
+{
+    cursor: pointer;
+}
+
+#search
+{
+    position: relative;
+
+    height: 100px;
+
+    border-top: solid 1px #eee;
+}
+
+#search input
+{
+    position: absolute;
+    top: 24px;
+    left: 50%;
+
+    width: 320px;
+    height: 32px;
+    margin-left: -175px;
+    padding-right: 15px;
+    padding-left: 15px;
+
+    border: solid 2px #f4604b;
+    border-radius: 15px;
+    outline: none;
+    background: url('images/sear.jpg') right center no-repeat;
+    background-position: 320px;
+}
+
+#search img
+{
+    position: absolute;
+    top: 14px;
+    right: 0;
+}
+
+#search ul
+{
+    position: absolute;
+    top: 56px;
+    left: 50%;
+
+    width: 300px;
+    height: 23px;
+    margin-left: -175px;
+}
+
+#search ul li
+{
+    font-size: 12px;
+
+    float: left;
+
+    margin: 10px 5px 0 20px ;
+}
+
+
+
+
+/*登录注册页样式*/
+.init
+{
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    right: -80%;
+
+    width: 80%;
+    height: 615px;
+
+    background-color: #fff;
+    // display: none;
+}
+
+
+#register
+{
+    /*position: relative;*/
+    width: 740px;
+    margin: 0 auto;
+}
+/*登录注册页左块css*/
+#register .left
+{
+    width: 195px;
+    height: 137px;
+    margin-top: 75px;
+    margin-left: 50px;
+}
+
+#register .left h3
+{
+    font: 900 20px/27px '';
+
+    color: #333;
+}
+
+#register .left p
+{
+    font: 14px/21px '';
+
+    color: #7a94ad;
+}
+
+#register .left a
+{
+    font: 12px/25px '';
+
+    display: inline-block;
+
+    width: 44px;
+    height: 25px;
+    margin-top: 20px;
+    margin-right: 12px;
+    padding-top: 44px;
+
+    cursor: pointer;
+    text-align: center;
+
+    color: #8e8e8e;
+}
+
+#register #close
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 40px;
+    height: 40px;
+
+    background-color: #e14835;
+}
+
+#close div
+{
+    width: 40px;
+    height: 40px;
+
+    background: url('images/closePop.gif') no-repeat center;
+}
+
+/*登录注册页，右块注册css*/
+#register .right_reg,
+#register .right_log
+{
+    position: relative;
+
+    width: 315px;
+    height: 287px;
+    margin-top: 80px;
+    padding-right: 140px;
+    padding-left: 35px;
+
+    border-left: solid 1px #eee;
+}
+
+#register .right_reg h3,
+#register .right_log h3
+{
+    font: 900 20px/20px '';
+
+    margin-bottom: 30px;
+
+    color: #333;
+}
+
+#register ._in
+{
+    font-size: 10px;
+
+    width: 280px;
+    height: 34px;
+    margin-bottom: 30px;
+    padding-left: 35px;
+
+    border: solid 1px #ddd;
+    /*outline:#f46e6e;
+*/
+}
+#register #mail,
+#register #mail_l
+{
+    background: url(images/mail.jpg) no-repeat 8px center;
+}
+#register #psd,
+#register #psd_l
+{
+    background: url(images/psd.jpg) no-repeat 8px center;
+}
+#register ._p
+{
+    font: 12px/16px '';
+
+    width: 96px;
+    height: 16px;
+    margin: 0;
+
+    color: #a1a1a1;
+}
+
+#register #btn,
+#register #btn_l
+{
+    font: 900 20px/45px '';
+
+    width: 320px;
+    height: 45px;
+    margin-top: 5px;
+
+    cursor: pointer;
+    text-align: center;
+
+    color: #fff;
+    border: 0;
+    background-color: #f6614b;
+}
+
+#register ._span
+{
+    font-size: 14px;
+
+    display: block;
+
+    margin-top: 10px;
+
+    color: #333;
+}
+#register ._b
+{
+    font-weight: 300;
+
+    cursor: pointer;
+
+    color: #a1a1a1;
+}
+#register .right_log span a
+{
+    font-size: 14px;
+
+    float: right;
+
+    width: 70px;
+    margin: 0;
+
+    color: #a1a1a1;
+}
+
+/*登录注册页，右块登录css*/
+#register .right_log,
+#register .right_reg
+{
+    display: none;
+}
+/*输入的邮箱或者密码不符合消息时提示标签*/
+#register .tips
+{
+    font: 12px/16px '';
+
+    position: absolute;
+    right: 140px;
+
+    display: none;
+
+    height: 16px;
+
+    color: #f58080;
+}
+#register .tips1
+{
+    top: 86px;
+}
+#register .tips2
+{
+    top: 152px;
+}

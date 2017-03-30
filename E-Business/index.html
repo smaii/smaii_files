@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+	<script src="public/jquery-1.7.2.js" type="text/javascript" charset="utf-8"></script>
+	<script src="public/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+	<script src="public/register/register.js" type="text/javascript" charset="utf-8"></script>
+	<link rel="stylesheet" type="text/css" href="public/register/register.css">
+	<link type="text/css" rel="stylesheet" href="public/public.css"/>
+	<link type="text/css" rel="stylesheet" href="css/css.css"/>
+</head>
+<body>
+	
+	<!-- <iframe src="public/public_head.html" height="126px" width="100%" frameborder="0" scrolling="no" ></iframe> -->
+	<div class="init">  <!-- 插入的登录注册页 -->
+		<div id="register" class="clear">
+			<div class="left clear">
+				<h3>无需注册</h3>
+				<p>直接使用社交账号登录</p>
+				<a>微博</a>
+				<a>QQ</a>
+				<a>支付宝</a>
+			</div>
+
+			<div class="right_reg clear right">
+				<h3>用户注册</h3>
+				<input type="text" name="userMail" placeholder="邮箱" id="mail" class="_in">
+				<div class="tips1 tips">22222</div>
+				<br>
+				<input type="password" name="psd" value="" placeholder="密码" id="psd" class="_in">
+				<div class="tips2 tips">22222</div>
+				<br>
+				<a href="" class="_p">《卡当注册协议》</a>
+				<br>
+				<input type="button" name="" value="同意协议并注册" id="btn">
+				<br>
+				<span class="_span">已有账号？<b class="_b">登录</b></span>
+			</div>
+
+			<div class="right_log clear right">
+				<h3>用户登录</h3>
+				<input type="text" name="userMail" placeholder="邮箱/用户名" id="mail_l" class="_in">
+				<div class="tips1 tips">22222</div>
+				<br>
+				<input type="password" name="psd_l" value="" placeholder="密码" id="psd" class="_in">
+				<div class="tips2 tips">22222</div>
+				<br>
+				<p class="_p"><span></span>下次自动登录</p>
+				<input type="button" name="" value="立即登录" id="btn_l">
+				<br>
+				<span class="_span">还没账号？<b class="_b">注册</b><a href="">忘记密码？</a></span>
+			</div>
+
+			<div id="close">
+				<div></div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="page_mask"></div>   <!-- 遮罩 -->
+
+	<div id="container">  <!-- 头部欢迎页 -->
+		<div id="head" class="clear">
+			<ul class="left">
+				<li>Hi，欢迎来到卡当网</li>
+				<li><b>登录</b></li>
+				<li><b>注册</b></li>
+			</ul>
+			<ul class="right">
+				<li><a href="my-kadang/myKaDang.html">我的卡当</a></li>
+				<li><a href="cart/cart.html">购物车</a></li>
+				<li>手机版</li>
+				<li><a href="collecters/collect.html">我的收藏</a></li>
+				<li>在线客服</li>
+				<li>收藏卡当网</li>
+			</ul>
+			<img src="public/register/images/logo.jpg" alt="">
+		</div>
+
+
+		<div id="search">
+			<input type="text" name="" value="" placeholder="七夕情人节送女朋友什么？">
+			<ul>
+				<li><a href="">送女朋友</a></li>
+				<li><a href="">浪漫表白</a></li>
+				<li><a href="images/">我的订单查询</a></li>
+			</ul>
+			<img src="public/register/images/kdDes.png" alt="">
+		</div>
+	</div>
+	
+	<div id="tab">
+		<ul>
+			
+			<li class="_first"><a href="">暖心礼物</a></li>
+			<li><a href="">送女生</a></li>
+			<li><a href="">送男生</a></li>
+			<li><a href="birthday-gifts/birthdayGifts.html">生日礼物</a></li>
+			<li><a href="">本周新品</a></li>
+			<li><a href="">约会送花</a></li>
+		</ul>
+	</div>
+
+	<div id="main" class="clear">
+		<div id="banner">
+			<ul id="menu02">
+				<li>名字定制</li>
+				<li>名字定制</li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<img src="images/left.png" class="_left">
+			<img src="images/right.png" class="_right">
+		</div>
+		<p id="banner-click">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		</p>
+		<div class="left">
+			<h2>热门标签</h2>
+			<table>
+					<tr>
+						<td><a href="">名字定制</a></td>
+						<td><a href="">100元以内</a></td>
+					</tr>
+					<tr>
+						<td><a href="">定情戒指</a></td>
+						<td><a href="">巧克力/花</a></td>
+					</tr>
+					<tr>
+						<td><a href="">手链手镯</a></td>
+						<td><a href=""></a>创意&心意</td>
+					</tr>
+			</table>
+			<h2 class="_h">全部礼物</h2>
+			<ul id="menu01">
+				<li>时尚饰品</li>
+				<li>时尚饰品</li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+		<div class="right">
+			<img src="images/img15.jpg" alt="">
+			<img src="images/img19.jpg" class="img2">
+		</div>
+	</div>
+
+	<ul id="right-fix">
+		<li class="first"><a href="">送礼问我</a></li>
+		<li><a href="">我的收藏</a></li>
+		<li><a href="">我有话说</a></li>
+		<li class="last"><a href=""><img src="images/wxicon.png"></a><img src="images/code.jpg" class="code"></li>
+		<li class="top">
+			<a href="javascript:;">回到顶部</a>
+		</li>
+
+	</ul>
+	
+	<div id="container-gifts">
+		<div id="gifts" class="clear">
+			
+			<div id="hot-gifts">
+				<h3>
+					爆款推荐<span>买过的都说不错，销量高评价好，买个放心，再定制一下自己的心意那就完美了</span>
+				</h3>
+				<ul class="list">
+					<li >
+						<img src="images/img33.jpg" alt="">
+						<p><span>￥</span>998<span class="right">1人购买</span></p>
+						<span>送她钱包，用的时候就能想到你</span>
+					</li>
+					<li>
+						<img src="images/img22.jpg" alt="">
+						<p><span>￥</span>998<span class="right">2人购买</span></p>
+						<span>送她钱包，用的时候就能想到你</span>
+					</li>
+					<li>
+						<img src="images/img25.jpg" alt="">
+						<p><span>￥</span>998<span class="right">3人购买</span></p>
+						<span>送她钱包，用的时候就能想到你</span>
+					</li>
+					<li class="special">
+						<img src="images/img14.jpg" alt="">
+						<p><span>￥</span>998<span class="right">4人购买</span></p>
+						<span>送她钱包，用的时候就能想到你</span>
+					</li>
+					<li>
+						<img src="images/img18.jpg" alt="">
+						<p><span>￥</span>998<span class="right">5人购买</span></p>
+						<span>送她钱包，用的时候就能想到你</span>
+					</li>
+					<li>
+						<img src="images/img12.jpg" alt="">
+						<p><span>￥</span>998<span class="right">6人购买</span></p>
+						<span>送她钱包，用的时候就能想到你</span>
+					</li>
+					<li>
+						<img src="images/img13.jpg" alt="">
+						<p><span>￥</span>998<span class="right">7人购买</span></p>
+						<span>送她钱包，用的时候就能想到你</span>
+					</li>
+					<li class="special">
+						<img src="images/img08.jpg" alt="">
+						<p><span>￥</span>998<span class="right">8人购买</span></p>
+						<span>送她钱包，用的时候就能想到你</span>
+					</li>
+				</ul>
+				<div id="banner2">
+					<a href="javascript:void(0);">
+						<img src="images/pic.jpg" alt="" class="left">
+						<img src="images/heart.jpg" alt="" class="right">
+					</a>
+				</div>
+			</div>
+
+			<div id="nav">
+				<ul class="item clear">
+					<li><a href="javascript:;">生日礼物</a></li>
+					<li><a href="javascript:;">本周新品</a></li>
+					<li><a href="javascript:;">送女友礼物</a></li>
+					<li><a href="javascript:;">送男友礼物</a></li>
+					<li><a href="javascript:;">成双成对礼物</a></li>
+				</ul>
+			</div>
+
+			<div id="birthday-gifts">
+				<h1>生日礼物</h1>
+				<ul class="list">
+					<li class="first">
+						<a href="javascript:;"><img src="images/img20.jpg"></a>
+					</li>
+					<li><a href="javascript:;"><img src="images/img05.jpg"></a>
+						<p><span>￥</span>999
+							<span class="right">999条评价</span>
+						</p>
+						<span class="over">限量版马卡龙充电式多功能移动电源你值得拥有</span>
+					</li>
+					<li class="special"><a href="javascript:;"><img src="images/img42.jpg"></a>
+						<p><span>￥</span>999
+							<span class="right">999条评价</span>
+						</p>
+						<span class="over">限量版马卡龙充电式多功能移动电源你值得拥有</span>
+					</li>
+					<li><a href="javascript:;"><img src="images/img27.jpg"></a>
+						<p><span>￥</span>999
+							<span class="right">999条评价</span>
+						</p>
+						<span class="over">限量版马卡龙充电式多功能移动电源你值得拥有</span>
+					</li>
+					<li><a href="javascript:;"><img src="images/img47.jpg"></a>
+						<p><span>￥</span>999
+							<span class="right">999条评价</span>
+						</p>
+						<span class="over">限量版马卡龙充电式多功能移动电源你值得拥有</span>
+					</li>
+					<li><a href="javascript:;"><img src="images/img28.jpg"></a>
+						<p><span>￥</span>999
+							<span class="right">999条评价</span>
+						</p>
+						<span class="over">限量版马卡龙充电式多功能移动电源你值得拥有</span>
+					</li>
+					<li class="special"><a href="javascript:;"><img src="images/img04.jpg"></a>
+						<p><span>￥</span>999
+							<span class="right">999条评价</span>
+						</p>
+						<span class="over">限量版马卡龙充电式多功能移动电源你值得拥有</span>
+					</li>
+					<li><a href="javascript:;"><img src="images/img07.jpg"></a>
+						<p><span>￥</span>999
+							<span class="right">999条评价</span>
+						</p>
+						<span class="over">限量版马卡龙充电式多功能移动电源你值得拥有</span>
+					</li>
+					<li><a href="javascript:;"><img src="images/img10.jpg"></a>
+						<p><span>￥</span>999
+							<span class="right">999条评价</span>
+						</p>
+						<span class="over">限量版马卡龙充电式多功能移动电源你值得拥有</span>
+					</li>
+					<li><a href="javascript:;"><img src="images/img26.jpg"></a>
+						<p><span>￥</span>999
+							<span class="right">999条评价</span>
+						</p>
+						<span class="over">限量版马卡龙充电式多功能移动电源你值得拥有</span>
+					</li>
+					<li class="special"><a href="javascript:;"><img src="images/ic (6).png"></a>
+					</li>
+				</ul>
+			</div>
+
+
+
+			<div id="new-gifts">
+				
+				<h1>本周新品</h1>
+				<ul class="list">
+					<li class="first">
+						<a href="javascript:;"><img src="images/img20.jpg"></a>
+					</li>
+					<li><a href="javascript:;"><img src="images/img05.jpg"></a>
+						<p><span>￥</span>999
+							<span class="right">999条评价</span>
+						</p>
+						<span class="over">完美堪比真钻罗马假日手链 镶嵌近百颗3A</span>
+					</li>
+					<li class="special"><a href="javascript:;"><img src="images/img42.jpg"></a>
+						<p><span>￥</span>999
+							<span class="right">999条评价</span>
+						</p>
+						<span class="over">完美堪比真钻罗马假日手链 镶嵌近百颗3A</span>
+					</li>
+					<li><a href="javascript:;"><img src="images/img27.jpg"></a>
+						<p><span>￥</span>999
+							<span class="right">999条评价</span>
+						</p>
+						<span class="over">完美堪比真钻罗马假日手链 镶嵌近百颗3A</span>
+					</li>
+					<li><a href="javascript:;"><img src="images/img47.jpg"></a>
+						<p><span>￥</span>999
+							<span class="right">999条评价</span>
+						</p>
+						<span class="over">完美堪比真钻罗马假日手链 镶嵌近百颗3A</span>
+					</li>
+					<li><a href="javascript:;"><img src="images/img28.jpg"></a>
+						<p><span>￥</span>999
+							<span class="right">999条评价</span>
+						</p>
+						<span class="over">完美堪比真钻罗马假日手链 镶嵌近百颗3A</span>
+					</li>
+					<li class="special"><a href="javascript:;"><img src="images/img04.jpg"></a>
+						<p><span>￥</span>999
+							<span class="right">999条评价</span>
+						</p>
+						<span class="over">完美堪比真钻罗马假日手链 镶嵌近百颗3A</span>
+					</li>
+					<li><a href="javascript:;"><img src="images/img07.jpg"></a>
+						<p><span>￥</span>999
+							<span class="right">999条评价</span>
+						</p>
+						<span class="over">完美堪比真钻罗马假日手链 镶嵌近百颗3A</span>
+					</li>
+					<li><a href="javascript:;"><img src="images/img10.jpg"></a>
+						<p><span>￥</span>999
+							<span class="right">999条评价</span>
+						</p>
+						<span class="over">完美堪比真钻罗马假日手链 镶嵌近百颗3A</span>
+					</li>
+					<li><a href="javascript:;"><img src="images/img26.jpg"></a>
+						<p><span>￥</span>999
+							<span class="right">999条评价</span>
+						</p>
+						<span class="over">完美堪比真钻罗马假日手链 镶嵌近百颗3A</span>
+					</li>
+					<li class="special"><a href="javascript:;"><img src="images/ic (5).png"></a>
+					</li>
+				</ul>
+
+			</div>
+
+			<div id="to-girlfriend">
+				<h1>送女友礼物</h1>
+				<ul class="list">
+					<li class="first">
+						<a href="javascript:;"><img src="images/img20.jpg"></a>
+					</li>
+					<li><a href="javascript:;"><img src="images/img05.jpg"></a>
+						<p><span>￥</span>999
+							<span class="right">999条评价</span>
+						</p>
+						<span class="over">baby王丽坤同款秋冬新款纯色仿羊绒纯棉披</span>
+					</li>
+					<li class="special"><a href="javascript:;"><img src="images/img42.jpg"></a>
+						<p><span>￥</span>999
+							<span class="right">999条评价</span>
+						</p>
+						<span class="over">baby王丽坤同款秋冬新款纯色仿羊绒纯棉披</span>
+					</li>
+					<li><a href="javascript:;"><img src="images/img27.jpg"></a>
+						<p><span>￥</span>999
+							<span class="right">999条评价</span>
+						</p>
+						<span class="over">baby王丽坤同款秋冬新款纯色仿羊绒纯棉披</span>
+					</li>
+					<li><a href="javascript:;"><img src="images/img47.jpg"></a>
+						<p><span>￥</span>999
+							<span class="right">999条评价</span>
+						</p>
+						<span class="over">baby王丽坤同款秋冬新款纯色仿羊绒纯棉披</span>
+					</li>
+					<li><a href="javascript:;"><img src="images/img28.jpg"></a>
+						<p><span>￥</span>999
+							<span class="right">999条评价</span>
+						</p>
+						<span class="over">baby王丽坤同款秋冬新款纯色仿羊绒纯棉披</span>
+					</li>
+					<li class="special"><a href="javascript:;"><img src="images/img04.jpg"></a>
+						<p><span>￥</span>999
+							<span class="right">999条评价</span>
+						</p>
+						<span class="over">baby王丽坤同款秋冬新款纯色仿羊绒纯棉披</span>
+					</li>
+					<li><a href="javascript:;"><img src="images/img07.jpg"></a>
+						<p><span>￥</span>999
+							<span class="right">999条评价</span>
+						</p>
+						<span class="over">baby王丽坤同款秋冬新款纯色仿羊绒纯棉披</span>
+					</li>
+					<li><a href="javascript:;"><img src="images/img10.jpg"></a>
+						<p><span>￥</span>999
+							<span class="right">999条评价</span>
+						</p>
+						<span class="over">baby王丽坤同款秋冬新款纯色仿羊绒纯棉披</span>
+					</li>
+					<li><a href="javascript:;"><img src="images/img26.jpg"></a>
+						<p><span>￥</span>999
+							<span class="right">999条评价</span>
+						</p>
+						<span class="over">baby王丽坤同款秋冬新款纯色仿羊绒纯棉披</span>
+					</li>
+					<li class="special"><a href="javascript:;"><img src="images/ic (7).png"></a>
+					</li>
+				</ul>
+			</div>
+
+			<div id="to-boyfriend">
+				<h1>送男友礼物</h1>
+				<ul class="list">
+					<li class="first">
+						<a href="javascript:;"><img src="images/img20.jpg"></a>
+					</li>
+					<li><a href="javascript:;"><img src="images/img05.jpg"></a>
+						<p><span>￥</span>999
+							<span class="right">999条评价</span>
+						</p>
+						<span class="over">多功能大容量 男士手拿包钱包 长款 头层</span>
+					</li>
+					<li class="special"><a href="javascript:;"><img src="images/img42.jpg"></a>
+						<p><span>￥</span>999
+							<span class="right">999条评价</span>
+						</p>
+						<span class="over">多功能大容量 男士手拿包钱包 长款 头层</span>
+					</li>
+					<li><a href="javascript:;"><img src="images/img27.jpg"></a>
+						<p><span>￥</span>999
+							<span class="right">999条评价</span>
+						</p>
+						<span class="over">多功能大容量 男士手拿包钱包 长款 头层</span>
+					</li>
+					<li><a href="javascript:;"><img src="images/img47.jpg"></a>
+						<p><span>￥</span>999
+							<span class="right">999条评价</span>
+						</p>
+						<span class="over">多功能大容量 男士手拿包钱包 长款 头层</span>
+					</li>
+					<li><a href="javascript:;"><img src="images/img28.jpg"></a>
+						<p><span>￥</span>999
+							<span class="right">999条评价</span>
+						</p>
+						<span class="over">多功能大容量 男士手拿包钱包 长款 头层</span>
+					</li>
+					<li class="special"><a href="javascript:;"><img src="images/ic (3).png"></a>
+					</li>
+				</ul>
+			</div>
+			
+			<div id="double-gifts">
+			<h1>成双成对</h1>
+				<ul class="list">
+					<li class="first">
+						<a href="javascript:;"><img src="images/img20.jpg"></a>
+					</li>
+					<li><a href="javascript:;"><img src="images/img05.jpg"></a>
+						<p><span>￥</span>999
+							<span class="right">999条评价</span>
+						</p>
+						<span class="over">我爱你一生一世 925纯银情侣戒指男戒女戒</span>
+					</li>
+					<li class="special"><a href="javascript:;"><img src="images/img42.jpg"></a>
+						<p><span>￥</span>999
+							<span class="right">999条评价</span>
+						</p>
+						<span class="over">我爱你一生一世 925纯银情侣戒指男戒女戒</span>
+					</li>
+					<li><a href="javascript:;"><img src="images/img27.jpg"></a>
+						<p><span>￥</span>999
+							<span class="right">999条评价</span>
+						</p>
+						<span class="over">我爱你一生一世 925纯银情侣戒指男戒女戒</span>
+					</li>
+					<li><a href="javascript:;"><img src="images/img47.jpg"></a>
+						<p><span>￥</span>999
+							<span class="right">999条评价</span>
+						</p>
+						<span class="over">我爱你一生一世 925纯银情侣戒指男戒女戒</span>
+					</li>
+					<li class="special"><a href="javascript:;"><img src="images/ic (4).png"></a>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+	</div>
+	
+	<iframe src="public/public_leg.html" height="520px" width="100%" frameborder="0" scrolling="no" marginheight="50px"></iframe>
+
+
+	<!-- <div style="height: 50px"></div> -->
+
+
+	<iframe src="public/public_foot.html" height="220px" width="100%" frameborder="0" scrolling="no"></iframe>
+
+</body>
+</html>
