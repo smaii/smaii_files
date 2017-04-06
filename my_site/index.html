@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>FREE'S SITE</title>
+	<link rel="icon" href="src/site4.png">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/public.css">
+	<link rel="stylesheet" href="css/media.css">
+	<link rel="stylesheet" href="http://apps.bdimg.com/libs/jquery-fullPage/2.7.4/jquery.fullPage.css">
+	<script src="http://apps.bdimg.com/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="http://apps.bdimg.com/libs/jquery-fullPage/2.7.4/jquery.fullPage.min.js"></script>
+	<script src="js/main.js"></script>
+</head>
+<body>
+<!--菜单 导航-->
+<div id="menu">
+	<a href="#page1" class=" active ">Home<span>主页</span></a>
+	<a href="#page2">Self-Introduction<span>个人简介</span></a>
+	<a href="#page3">Work Experience<span>工作经历</span></a>
+	<a href="#page4">Self-Demo<span>个人项目</span></a>
+	<a href="#page5">Come On<span>来吧!带我走</span></a>
+</div>
+
+<div id="scroll">
+	<img src="src/scroll0.png" alt="">
+</div>
+<!--welcome-->
+<div id="container">
+	<div class="section section1">
+		<div class="self">
+			<img src="src/self.jpg" title="wechat:xiaobu_style">
+			<h1 class="">Welcome To Free's Website</h1>
+		</div>
+		<!--实时天气-->
+		<div id="weather">
+			<div class="content">
+				<ul>
+					<li class="date"></li>
+					<li class="tem"></li>
+					<li class="some"></li>
+					<li class="advice"></li>
+				</ul>
+			</div>
+			<div class="search">
+				<input type="text"><button></button>
+			</div>
+		</div>
+		<!--箭头动画-->
+		<img src="src/arrowB.png" class="arrowB">
+	</div>
+	<!--简单介绍-->
+	<div class="section section2">
+		<ul>
+			<li>精通html5,css,javascript</li>
+			<li >NAME | 方锐</li>
+			<li>熟练使用ajax技术,jsonp跨域等</li>
+			<li >SEX | 男</li>
+			<li>熟悉jquery类库,css3新特性,canvas</li>
+			<li >AGE | 24</li>
+			<li>了解前端模块开发,seajs,require.js</li>
+			<li>EDUCATION | 本科</li>
+			<li>有使用gulp,git,svn等前端工具的经验</li>
+			<li>TEL | 13048824396</li>
+			<li>熟练使用sublime text3,webstorm等IDE</li>
+			<li>EMAIL | smapustyle@gmail.com</li>
+			<li>熟悉bootstrap,angularjs,ionic</li>
+		</ul>
+	</div>
+	<!--工作经历-->
+	<div class="section section3">
+		<div class="top">
+			<h3>工作经历</h3>
+			<p>2016.2 - 2017.1&emsp;</p>
+			<span>技鼎软件科技(南京)有限公司</span>
+			<ul>
+				<li>前端团队成员，根据公司客户网站定制的需求，完成工作</li>
+				<li>团队讨论并制定技术规范，分配任务</li>
+				<li>根据UI设计稿，完成团队的分工，做兼容性测试</li>
+				<li>偶尔处理客户的售后技术问题，达到客户需求</li>
+				<li>个人提升，关注和尝试HyBrid App和微信小程</li>
+			</ul>
+		</div>
+		<div class="bottom">
+			<ul class="clearfix">
+				<li>
+					<!--div作为scroll容器-->
+					<div>
+						<h2>NO.1</h2>
+						<p>机智猫——电子类社区<a href="http://www.techmiao.com">(http://www.techmiao.com/)</a></p>
+						<!--空标签p,用来JQ append内容-->
+						<p></p>
+					</div>
+				</li>
+				<li>
+					<div>
+						<h2>NO.2</h2>
+						<p>手机工坊——电商网站<a href="http://www.shoujidiy.com/">(http://www.shoujidiy.com/)</a></p>
+						<p></p>
+					</div>
+				</li>
+				<li>
+					<h2>NO.3</h2>
+					<p>灵镜——企业站<a href="http://www.lingvr.com/">( http://www.lingvr.com/)</a></p>
+					<p></p>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!--个人DEMO-->
+	<div class="section section4">
+		<h3>个人DEMO</h3>
+		<ul class="clearfix">
+			<li>
+				<div class="front">
+					<h2>个人简历站<br>(PC+Mobile)</h2>
+					<p><strong>描述 :</strong><br>以JQ插件fullpage为蓝本,主要运用C3动画和flex弹性盒</p>
+				</div>
+				<div class="back">
+					<p><strong>项目心得 :</strong><br>现在c3和H5的支持已经很友好了.老一代里JQ愈久弥新,依旧坚挺.另外,弹性盒纵列的排布问题卡了我好久ORZ</p>
+					<a href="">To See</a>
+				</div>
+			</li>
+			<li>
+				<div class="front">
+					<h2>Hybrid App<br>(Ionic)</h2>
+					<p><strong>描述 :</strong><br>采用的是ionic v1,虽然angular2逐渐大火,但还是忍不住吐槽,怎么老是重复的造轮子.WTF?</p>
+				</div>
+				<div class="back">
+					<p><strong>项目心得 :</strong><br>这玩意用的还不熟,当初在项目创建(start)和打包(build)就遇到了不少bug.推荐ionic Helper替代CLI,这是中文版的,比官方的Ionic Lab友好</p>
+					<a href="https://github.com/smaii/smaii_files/tree/master/app">To See</a>
+				</div>
+			</li>
+			<li>
+				<div class="front">
+					<h2>仿电商网站<br>(kadang.com)</h2>
+					<p><strong>描述 :</strong><br>随便找了个电商网站试水了下,很简单,无后台.当初写的很乱,现在不忍直视- -!</p>
+				</div>
+				<div class="back">
+					<p><strong>项目心得 :</strong><br>电商这种网站一个人还是不好弄.比较偏原生CSS3,ajax,jquery,cookie,正则这些等等.果然正则还是火星文,用的时候查手册...</p>
+					<a href="https://github.com/smaii/smaii_files/tree/master/E-Business">To See</a>
+				</div>
+			</li>
+			<li>
+				<div class="front">
+					<h2>贪吃蛇游戏<br>(微信平台)</h2>
+					<p><strong>描述 :</strong><br>玩贪吃蛇大作战产生的想法,做个简易的小游戏,尚在开发中(No引擎,基于canvas.)...</p>
+				</div>
+				<div class="back">
+					<p><strong>项目心得 :</strong><br>试水了下seajs.用着还行,感觉canvas入门容易,想搞清除很难...</p>
+					<a href="https://github.com/smaii/smaii_files/tree/master/snake">To See</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<!--结束语-->
+	<div class="section section5">
+			<p>可以加班!可以加班!可以加班!</p>
+			<p>热爱前端，关注行业趋势</p>
+			<p>细致耐心，追求细节</p>
+			<p>工作责任心强</p>
+			<p>善于学习总结</p>
+			<p class="car">&emsp;</p>
+			<p class="last"><span> …>_<… </span><strong>求带走</strong><span> …>_<… </span></p>
+		<img src="src/arrowT.png" alt="">
+	</div>
+</div>
+</body>
+<script>
+
+</script>
+</html>

@@ -1,0 +1,411 @@
+html{
+	font-size:100px;
+}
+
+/*设置菜单*/
+#menu{
+	width:100%;
+	position: fixed;
+	top:0;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	z-index: 100;
+}
+#menu a{
+	text-align: center;
+	text-decoration: none;
+	color: rgb(170,231,85);
+	font: .16rem/.35rem "";
+	box-shadow: 0 .03rem .04rem .01rem rgba(0,0,0,0.35);
+	background-color: rgba(123,170,190,0.3);
+	border-right: solid .01rem #9f8b77;
+	flex:auto;/*弹性盒 item自动等分剩余空间*/
+}
+#menu a.active,
+#menu a:hover{
+	background-color: rgba(27,188,155,0.4);
+	color:#fff;
+}
+#menu a span{
+	display: none;
+	position: absolute;
+	top:.35rem;
+	text-align: center;
+	color: rgb(170,127,150);
+}
+#menu a:hover span{
+	display: block;
+}
+#scroll{
+	position: fixed;
+	z-index:100;
+	right:0;
+	bottom:0;
+	display: none;
+	cursor: pointer;
+}
+/*-----------------第1页----------------------*/
+#container .section1{
+	background:url("../src/bg5.jpg");
+	background-size:cover;
+}
+#container .section1 .self{
+	text-align: center;
+	position: relative;
+	bottom: 10%;
+}
+
+#container .section1 .self img{
+	border-radius: 50%;
+	border:solid .01rem #f1f2f3;
+	cursor: pointer;
+	animation:img 1500ms ease both;
+}
+@keyframes img {
+	0% {
+		opacity: 0;
+		transform: scale3d(.3, .3, .3);
+	}
+	20% {
+		transform: scale3d(1.1, 1.1, 1.1);
+	}
+	40% {
+		transform: scale3d(.9, .9, .9);
+	}
+	60% {
+		opacity: 1;
+		transform: scale3d(1.03, 1.03, 1.03);
+	}
+	80% {
+		transform: scale3d(.97, .97, .97);
+	}
+	to {
+		opacity: 1;
+		transform: scale3d(1, 1, 1);
+	}
+}
+#container .section1 .self h1{
+	font:.24rem/.3rem"";
+	color: #03ccbb;
+	animation: fade 2s 500ms ease alternate infinite;
+}
+@keyframes fade {
+	from{
+		opacity:0;
+	}
+	to{
+		opacity:1;
+	}
+}
+/*weather*/
+#container .section1 #weather{
+	display: flex;
+	flex-direction: column;
+	/*justify-content: center;*/
+	align-items: center;
+}
+#container .section1 #weather .content {
+	max-width: 3.2rem;
+}
+#container .section1 #weather .content li{
+	font:.16rem/.3rem "";
+	color: #fff;
+
+}
+#container .section1 #weather .content li.advice{
+	height:1.5rem;
+}
+#container .section1 #weather .search{
+	position: absolute;
+	bottom:1.2rem;
+}
+#container .section1 #weather input{
+	height:.18rem;
+	width:2rem;
+	color: #cccccc;
+	text-indent:.5em;
+	background-color: rgba(0,0,0,0.3);
+}
+#container .section1 #weather button{
+	background: url("../src/search.png") no-repeat center;
+	border:0;
+	position: relative;
+	right:.2rem;
+	top:.05rem;
+	height: .2rem;
+	width:.2rem;
+}
+
+/*-----------------第2页----------------------*/
+#container .section2 {
+	background:url("../src/bg2.jpg");
+	background-size:cover;
+}
+#container .section2 ul{
+	display: flex;
+	display: -webkit-flex;
+	flex-flow: column;
+	align-items: flex-start;
+
+}
+#container .section2 ul li{
+	/*flex:0 1 auto;*/
+}
+#container .section2 ul li:nth-child(even){
+	font-size:.24rem;
+	color: #11c1f3;
+	position: relative;
+	right: 100%;
+	padding-left:.25rem;
+
+}
+#container .section2 ul li:nth-child(odd){
+	left: 100%;
+	position: relative;
+	box-shadow: .02rem .02rem .05rem #666,-.02rem -.02rem .05rem #666;
+	border-radius: .05rem;
+	background-color: rgba(200,200,200,0.2);
+	font: .16rem/.3rem "";
+	color: #fff;
+	padding:0 .1rem;
+}
+
+/*-----------------第3页----------------------*/
+#container .section3{
+	background:url("../src/bg3.jpg");
+	background-size:cover;
+}
+#container .section3 .top{
+	box-shadow: .02rem .02rem .05rem #666,-.02rem -.02rem .05rem #666;
+	background-color: rgba(0,0,0,.4);
+	width:5rem;
+	margin:0 auto;
+	color: #f1f2f3;
+}
+#container .section3 .top h3{
+	border-bottom: solid 2px #f00;
+	font-size:.18rem;
+	text-align: center;
+}
+#container .section3 .top p{
+	float:right;
+	font: .14rem/.2rem "";
+	font-style: italic;
+}
+#container .section3 .top ul li{
+	/*list-style: circle;*/
+	font:.14rem/.24rem "";
+}
+#container .section3 .top span{
+	font: .14rem/.2rem "";
+}
+#container .section3 .bottom{
+	width:5rem;
+	margin:0 auto;
+	overflow: hidden;
+	box-shadow: 0 .03rem .04rem .01rem rgba(0,0,0,0.35);
+}
+/*ul作为中间层,scroll容器*/
+#container .section3 .bottom ul{
+	width:10rem;
+}
+#container .section3 .bottom ul li{
+	overflow: hidden;
+	width:.5rem;
+	height:3rem;
+	float: left;
+	/*margin-left:-1.5rem;*/
+	background-color: rgba(150,150,150,0.8);
+	transition: width 650ms;
+}
+#container .section3 .bottom ul li:last-child,
+#container .section3 .bottom ul li div{
+	/*margin-left:0;*/
+	width:4rem;
+}
+/*比用js操作简洁的多,并且更加流畅,没有bug*/
+#container .section3 .bottom ul li:hover{
+	width:4rem;
+}
+
+#container .section3 .bottom ul li h2{
+	float: left;
+	width:.48rem;
+	border-left:solid .02rem #eee;
+	box-shadow: -.02rem 0 .05rem #ccc;
+	text-align: center;
+	font:.16rem/3rem "";
+}
+#container .section3 .bottom ul li p{
+	text-indent: 2em;
+	float: left;
+	width:3rem;
+	margin:.1rem .2rem;
+	font:.16rem/.3rem "";
+	color: #111;
+}
+
+/*-----------------第4页----------------------*/
+#container .section4{
+	background:url("../src/bg4.jpg");
+	background-size:cover;
+}
+#container .section4 h3{
+	text-align: center;
+	font:.18rem/.30rem "";
+	color: #fff;
+	position: relative;
+	bottom:1rem;
+}
+#container .section4 ul{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+}
+#container .section4 ul li{
+	position: relative;
+	background-color: rgba(200,200,200,0.6);
+	width:1.5rem;
+	height: 2.5rem;
+	border: solid .01rem #aaa;
+	margin-bottom:.3rem;
+	box-shadow: 0 .03rem .04rem .01rem rgba(0,0,0,0.35);
+	cursor: pointer;
+	animation-iteration-count: 1;
+	/*transform: rotateY(-360deg);*/
+	transition: transform 700ms;
+}
+/*hover的时候加上一个与动画相同的过度,如果继续用动画,效果将不刷新*/
+#container .section4 ul li:hover{
+	/*animation: roll 500ms;*/
+	transform: rotateY(360deg);
+}
+#container .section4 ul li .front{
+	display: block;
+}
+#container .section4 ul li .back{
+	display: none;
+}
+/*hover时交替显示li里的内容*/
+#container .section4 ul li:hover .front{
+	display: none;
+}
+#container .section4 ul li:hover .back{
+	display: block;
+}
+/*卡片内容的样式*/
+
+#container .section4 ul li .front p,
+#container .section4 ul li .back  p {
+	font: .16rem/.26rem "";
+	color: #000;
+	word-wrap:break-word;
+}
+#container .section4 ul li .back a,
+#container .section4 ul li .front h2{
+	display: block;
+	width:100%;
+	position: absolute;
+	bottom:.1rem;
+	text-align: center;
+	margin: .08rem 0;
+	font:.14rem/.2rem "";
+	color: #fff;
+	background: #ef4d4d;
+	border-radius: .04rem;
+	box-shadow: 0 .03rem 0 0 #ab3434;
+}
+#container .section4 ul li strong{
+	color: #ef4d4d;
+}
+/*翻转动画*/
+.toroll{
+	/*backface-visibility: visible;*/
+	animation: roll 700ms;
+	/*transform-style: preserve-3d;*/
+}
+@keyframes roll {
+	from {
+		transform: rotate3d(0, 1, 0,0);
+		/*animation-timing-function: ease-out;*/
+	}
+	to {
+		transform: rotate3d(0, 1, 0,360deg);
+		/*animation-timing-function: ease-in;*/
+	}
+}
+
+/*-----------------第5页----------------------*/
+#container .section5{
+	background:url("../src/bg5.jpg");
+	background-size:cover;
+}
+#container .section5 ul{
+	position: relative;
+	top:100%;
+}
+#container .section5 p{
+	position: relative;
+	top:100%;
+	text-align: center;
+	font:.24rem/.30rem "";
+	color: #fafafa;
+	margin-bottom:.2rem;
+}
+#container .section5 p:nth-child(1){
+	font-weight: 900;
+	color: #fff;
+	margin-bottom:.5rem;
+}
+#container .section5 p.car{
+	padding:0 .5rem;
+	background: url("../src/car.png") no-repeat center;
+}
+#container .section5 p.last{
+	font-weight: 900;
+	color: #fff;
+}
+#container .section5 p.last strong{
+	color: #03ccbb;
+}
+#container .section5 p.last{
+	animation: cry 500ms linear infinite;
+	color: #000;
+}
+
+@keyframes cry{
+	0%  { transform: translateX(0);}
+	25%{ transform: translateX(.1rem);  }
+	50%{ transform: translateX(0);  }
+	75%{ transform: translateX(-.1rem);  }
+	100%{ transform: translateX(0);  }
+
+}
+
+#container .section5 img {
+	position: absolute;
+	bottom:.3rem;
+	left:50%;
+	margin-left:-.32rem;
+	z-index: 100;
+	animation: arrowT 500ms ease infinite;
+}
+@keyframes arrowT {
+	0%  { transform: translateY(0);}
+	50% { transform: translateY(.2rem);  }
+	100% { transform: translateY(0); }
+}
+#container .section1 img.arrowB{
+	position: absolute;
+	bottom:.3rem;
+	left:50%;
+	margin-left:-.32rem;
+	z-index: 100;
+	animation: arrowB 500ms ease infinite;
+}
+@keyframes arrowB {
+	0%  { transform: translateY(0);}
+	50% { transform: translateY(-.2rem);  }
+	100% { transform: translateY(0); }
+}
