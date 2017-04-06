@@ -1,0 +1,22 @@
+<ion-view view-title="照片墙">
+  <ion-content scroll="false">
+      <div class="bar bar-footer " id="take" >
+          <div class="button-bar">
+              <button class="button button-dark button-calm" ng-click="getphoto('camera')">拍照</button>
+              <!--<button class="button button-dark button-calm" ng-click="getphoto('savedphotoalbum'))">相册</button>-->
+          </div>
+      </div>
+
+      <ion-content>
+            <!--滚动区域-->
+          <div class="list">
+              <a ng-repeat="photo in photos" href="javascript:;" class="item item-thumbnail-left">
+                  <img ng-src="{{photo[0]}}">
+                  <h2>我的第{{photo[2]}}张图片</h2>
+                  <h4>&nbsp;&nbsp;&nbsp;&nbsp;{{photo[1]}}</h4>
+              </a>
+          </div>
+
+      </ion-content>
+  </ion-content>
+</ion-view>

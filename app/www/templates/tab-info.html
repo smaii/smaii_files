@@ -1,0 +1,52 @@
+<ion-view view-title="个人信息" >
+  <ion-content class="">
+    <!--姓名-->
+    <label class="item item-input">
+      <span class="input-label">姓名 :</span>
+      <input type="text" id="name">
+    </label>
+    <!--学历-->
+    <label class="item item-input">
+      <span class="input-label">学历 :</span>
+      <input type="text" id="zhuanye">
+    </label>
+
+    <!--性别-->
+    <ion-list>
+      <div class="list">
+        <label class="item item-input item-select">
+          <div class="input-label">
+            性别 :
+          </div>
+          <select>
+            <option selected>男</option>
+            <option>女</option>
+          </select>
+        </label>
+      </div>
+    </ion-list>
+    <!--日期-->
+    <label class="item item-input">
+      <span class="input-label">出生日期 :</span>
+      <input type="date">
+    </label>
+    <!--邮箱-->
+    <label class="item item-input">
+      <span class="input-label">邮箱 :</span>
+      <input type="email" id="email">
+    </label>
+    <!--电话-->
+    <label class="item item-input">
+      <span class="input-label">联系方式 :</span>
+      <input type="tel" id="phone">
+    </label>
+    <!--储存-->
+    <br>
+    <button class="button button-block button-positive" ng-click="save()">
+     储存信息
+    </button>
+      <button class="button button-block button-calm" ng-click="reader()">
+          同步信息
+      </button>
+  </ion-content>
+</ion-view>

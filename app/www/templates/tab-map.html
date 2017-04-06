@@ -1,0 +1,21 @@
+<ion-view view-title="地图导航">
+    <ion-content scroll="false">
+        <div class="bar bar-footer row " >
+            <div class="item-input-inset" class="col col-50">
+                <label class="item-input-wrapper">
+                    <i class="icon ion-ios-search placeholder-icon"></i>
+                    <input type="search" placeholder="搜周边" id="search">
+                </label>
+            </div>
+            <div class="col">
+                <button class="button button-balanced " ng-click="getsearch()">搜索</button>
+            </div>
+            <div class="col">
+                <button class="button button-balanced " ng-click="getpoint()">定位</button>
+            </div>
+        </div>
+        <ico-content>
+            <div id="mapContainer" style='height:100%;width:100%;'></div>
+        </ico-content>
+    </ion-content>
+</ion-view>
