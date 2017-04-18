@@ -52,7 +52,7 @@ $(function(){
 	//封装动态获取天气的函数
 	function getWeather(city){
 		$.ajax({
-			url:"http://v.juhe.cn/weather/index?format=2&cityname="+encodeURI(city)+"&dtype=&format=&key=2edc7b29b1c85597f72bf8ddb5d28877",
+			url:"http://v.juhe.cn/weather/index?format=2&cityname="+encodeURI(city)+"&dtype=&format=&key=02e4bcc8b4ace3f4e0fbe044a7f5945e",
 			dataType:'jsonp',
 			success:function(data){
 				var today = data.result.today;

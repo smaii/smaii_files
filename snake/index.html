@@ -18,7 +18,7 @@
 			<div class="max">
 				<div class="tip">
 					Tips:
-					<p>随便玩玩,别当真</p>
+					<p>怎么玩?自己试(❁ᴗ͈ˬᴗ͈)顺便看看右上角设置</p>
 
 				</div>
 				<div class="set">
@@ -206,10 +206,16 @@
 		border-radius: 5px;
 		box-shadow: 0 0 20px rgba(0,0,0,0.8);
 		overflow: hidden;
+		text-shadow:
+				0 -1px 0 #fff,
+				0 1px 0 #2e2e2e,
+				0 2px 0 rgba(0, 0, 0, 0.5);
+		color:#00f;
 	}
 	#container .word .time{
 		display: block;
 		text-align: center;
+		color:black;
 		text-shadow:
 				0 -1px 0 #fff,
 				0 1px 0 #2e2e2e,
@@ -269,6 +275,9 @@
 	.set img.active{
 		background-color: rgba(0,0,0,0.5);
 	}
+	.sore p{
+		padding-top:10px;
+	}
 	#container .word .max .tip p{
 		text-align: left;
 		text-indent: 2em;
@@ -285,7 +294,7 @@
 
 		setInterval(function(){
 			var _time = new Date();
-			var _date = _time.toGMTString();
+			var _date = _time.toLocaleString();
 			$('.word .time').html(_date);
 		},500);
 
@@ -316,7 +325,7 @@
 		$('#enter').click(function(){
 
 			//记录ID:
-			var _id = $('#id').val();
+			var _id = $('#id').val() || '无名氏';
 			localStorage.setItem('my_id',_id);
 			location.href = './snake/index.html';
 		});
@@ -340,7 +349,6 @@
 				//皮肤1代表纯色
 				localStorage.my_pifu = "false";
 			}else localStorage.setItem('my_pifu',$(this).attr('src').slice(5));
-			console.log($(this).attr('src'));
 		});
 
 		//设置食物种类
@@ -357,6 +365,15 @@
 		$('input[name=easy]').click(function(){
 			localStorage.setItem('my_easy',$(this).val());
 		});
+
+		//成绩
+		if(localStorage.sore) {
+			var str = `
+			<p>${localStorage.time}<br><br>ID : ${localStorage.my_id}<br><br>成绩 : ${localStorage.sore}</p>
+			`;
+
+			$('.sore').html(str);
+			}
 
 	});
 

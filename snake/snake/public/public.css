@@ -1,0 +1,12 @@
+    html,body,p,ul,li,h1,h2,h3,h4,h5,tr,td,input,textarea,fieldset{
+        margin:0;padding:0;
+    }
+    article, aside, details,figcaption, figure,footer,header,hgroup,main,menu,nav,section,summary {
+        display: block;
+    }
+    ul,li,ol{list-style: none;}
+
+    /*清除浮动*/
+    /*IE8以上和非IE浏览器才支持:after，原理和方法2有点类似，zoom(IE转有属性)可解决ie6,ie7浮动问题*/
+    .clear:after{display:block;clear:both;content:"";visibility:hidden;height:0}
+　  .clear{zoom:1}

@@ -1,0 +1,87 @@
+
+html,body{
+    font-size: 100px;
+    height:100%;
+    width:100%;
+    margin: 0;
+    padding: 0;
+}
+
+#main{
+    position: relative;
+    height:100%;
+    width:100%;
+	background-color: #013E7F;
+	overflow: hidden;
+}
+#can1,#can2,#can3{
+    /*border:solid 0.01rem #285395;*/
+    position:absolute;
+    left: 0;
+    top: 0;
+    /*height:100%;*/
+    /*width:100%;*/
+    z-index: 0;
+}
+#can2{
+    z-index:2;
+}
+#can3{
+	z-index:3;
+}
+#joyDiv{
+    padding:0;
+    margin:0;
+    width:1.5rem;
+    height:1.5rem;
+    position:absolute;
+    top:.2rem;
+    left:.2rem;
+    z-index:9;
+    overflow: hidden;
+    /*border:solid .01rem #666;*/
+}
+
+#joystick{
+    display: block;
+}
+#speed{
+	position: absolute;
+	bottom:.9rem;
+	left:.3rem;
+	width:.6rem;
+	height:.6rem;
+	border-radius: 50%;
+	background: url("../src/images/speed.png") center no-repeat;
+	background-color: rgba(0,0,0,0.3);
+	opacity: 0.6;
+	z-index: 9;
+}
+
+#shot{
+	position: absolute;
+	bottom:.3rem;
+	left:.9rem;
+	width:.6rem;
+	height:.6rem;
+	border-radius: 50%;
+	background: url("../src/images/up.png") center no-repeat;
+	background-color: rgba(0,0,0,0.5);
+	opacity: 0.5;
+	z-index: 9;
+}
+
+#main span{
+	width:.28rem;
+	height:.28rem;
+	position: absolute;
+	display: block;
+	background: url('../src/images/dead1.png') no-repeat;
+	z-index:8;
+}
+
+#bgm{
+	position: absolute;
+	left:-1000px;
+}
+
