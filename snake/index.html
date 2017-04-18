@@ -1,23 +1,364 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>SNAKE</title>
-    <link rel="icon" href="src/images/head-30.png">
-    <link rel="stylesheet" type="text/css" href="css/index.css">
-    <script src="public/sea.js" type="text/javascript" charset="utf-8"></script>
-    <script src="js/load.js" type="text/javascript" charset="utf-8"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="snake/public/public.css">
+	<script src="http://apps.bdimg.com/libs/jquery/1.11.3/jquery.min.js"></script>
+	<title>start</title>
 </head>
 <body>
 
-    <div id='main'>
-        <canvas id='can1' ></canvas>
-        <canvas id='can2' ></canvas>
-        <div id="joyDiv" ></div>
-    </div>
+	<div id="container">
+
+		<h3>Welcome To Snake</h3>
+		<div class="word">
+			<span class="time"></span>
+			<div class="max">
+				<div class="tip">
+					Tips:
+					<p>随便玩玩,别当真</p>
+
+				</div>
+				<div class="set">
+					<form action="">
+						<!--操作音量-->
+						<span class="ran">音量 : </span>
+						<input type="range" min="1" max="100" id="ran">
+						<br>
+						<span>难度 : </span>
+						<input type="radio" checked="checked" name="easy" value="e">简单
+						<input type="radio" name="easy" value="d">困难
+						<br>
+						<span>是否允许穿墙 : </span>
+						<input type="radio" checked="checked" name="wall" value="true">是
+						<input type="radio" name="wall" value="false">否
+						<br>
+						<span>食物种类 : </span>
+						<input type="radio" checked="checked" name="food" value="fruit">水果
+						<input type="radio" name="food" value="face">表情
+						<br>
+						<span class="pifu">皮肤选择 : </span>
+						<img src="snake/src/images/pifu1.png">
+						<img src="snake/src/images/shot.png">
+						<img src="snake/src/images/pifu2.png">
+						<img src="snake/src/images/pifu3.png">
+						<img src="snake/src/images/pifu4.png">
+					</form>
+				</div>
+				<div class="sore">
+					您暂未得分!!!
+				</div>
+
+			</div>
+		</div>
+		<input type="text" placeholder="Input ID :" id="id">
+		<span id="enter">Enter Game</span>
+		<span id="set"></span>
+		<span id="tip"></span>
+		<span id="sore"></span>
+		<!--bgm-->
+		<audio src="snake/src/mp3/bgm1.mp3" id="bgm" controls autoplay loop="loop"></audio>
+	</div>
 
 </body>
+<style>
+	html,body{
+		height:100%;
+		width:100%;
+	}
+	#container{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+		height:100%;
+		width:100%;
+		background: url('snake/src/images/start.jpg') no-repeat;
+		background-size: cover;
+		overflow: hidden;
+	}
+	
+	#container h3{
+		margin-bottom:20px;
+		font: 800 30px/40px "";
+		color: #00D2DB;
+		animation: fade 2s 500ms ease alternate infinite;
+		padding:0 50px;
+		text-shadow:
+				0 -1px 0 #fff,
+				0 1px 0 #2e2e2e,
+				0 2px 0 #2c2c2c,
+				0 3px 0 #2a2a2a,
+				0 4px 0 #282828,
+				0 5px 0 #262626,
+				0 6px 0 #242424,
+				0 7px 0 #222,
+				0 8px 0 #202020,
+				0 9px 0 #1e1e1e,
+				0 10px 0 #1c1c1c,
+				0 11px 0 #1a1a1a,
+				0 12px 0 #181818,
+				0 13px 0 #161616,
+				0 14px 0 #141414,
+				0 15px 0 #121212,
+				0 22px 30px rgba(0, 0, 0, 0.7);
+	}
+
+	@keyframes fade {
+		from{
+			opacity:0;
+		}
+		to{
+			opacity:1;
+		}
+	}
+
+	 #set, #tip,#sore{
+		display: block;
+		position: fixed;
+		right: 10px;
+		top:20px;
+		background: url('snake/src/images/tip.png') left center;
+		background-size:cover;
+		border-radius: 50%;
+		height:30px;
+		width:30px;
+		 box-shadow: 0 0 5px 3px rgba(0,0,0,0.8);
+		 cursor: pointer;
+	}
+	 #set{
+		top:60px;
+		background: url('snake/src/images/set.png') left center;
+	}
+	#sore{
+		top:100px;
+		background: url('snake/src/images/sore.png') left center;
+	}
+	#container > span:active{
+		box-shadow: 0 0 15px 3px rgba(66,66,66,0.8);
+
+	}
+	
+	#container #enter{
+		cursor: pointer;
+		font:900 40px/40px "";
+		color: #000;
+		/*animation: shake 500ms linear infinite;*/
+		box-shadow: 0 0 10px 8px rgba(0,0,0,0.9);
+		border-radius: 5px;
+		display: block;
+		margin: 50px auto;
+		padding:10px 20px;
+		text-shadow: 0 0 80px rgba(255,255,255,.5);
+		background: url(http://f.cl.ly/items/010q3E1u3p2Q0j1L1S1o/animated_text_fill.png) repeat-y;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		-webkit-animation: aitf 30s linear infinite,shake 500ms linear infinite;
+		-webkit-transform: translate3d(0,0,0);
+		-webkit-backface-visibility: hidden;
+
+	}
+
+	@keyframes aitf {
+		0% { background-position: 0% 50%; }
+		100% { background-position: 100% 50%; }
+	}
+	@keyframes shake{
+		0%  { transform: translateX(0);}
+		25%{ transform: translateX(.1rem);  }
+		50%{ transform: translateX(0);  }
+		75%{ transform: translateX(-.1rem);  }
+		100%{ transform: translateX(0);  }
+
+	}
+	#container #id{
+		margin:0 65px;
+		height:30px;
+		font:800 16px/30px '';
+		outline: none;
+		border-radius: 10px;
+		box-shadow: 0 0 10px rgba(255,255,255,0.5);
+		background-color: rgba(255,255,255,0.3);
+		text-shadow:
+				0 -1px 0 #fff,
+				0 1px 0 #2e2e2e,
+				0 2px 0 #2c2c2c,
+				0 3px 0 rgba(0, 0, 0, 0.5);
+		background: url('snake/src/images/hand.png') no-repeat;
+		animation : hand .5s linear alternate infinite;
+	}
+	@keyframes hand {
+		from{
+			background-position: 100% 0;
+		}
+		to{
+			background-position: 80% 0;
+		}
+		
+	}
+
+	#container .word{
+		height:150px;
+		margin:50px 10%;
+		background-color: rgba(255,255,255,0.2);
+		border-radius: 5px;
+		box-shadow: 0 0 20px rgba(0,0,0,0.8);
+		overflow: hidden;
+	}
+	#container .word .time{
+		display: block;
+		text-align: center;
+		text-shadow:
+				0 -1px 0 #fff,
+				0 1px 0 #2e2e2e,
+				0 2px 0 #2c2c2c,
+				0 3px 0 rgba(0, 0, 0, 0.5);
+	}
+	#container .word .max{
+		position: relative;
+		width:9000px;
+	}
+	#container .word .max div{
+		position: absolute;
+		top:0;
+		left: 0;
+		width:80vw;
+		height: 150px;
+		z-index:1;
+	}
+	#container .word .max div.tip{
+		opacity: 1;
+	}
+	#container .word .max div.set,.sore{
+		opacity:0;
+	}
+	#container .word .max div.set{
+		z-index:10;
+		text-align: left;
+		padding-left:10px;
+	}
+	.set span{
+		color: pink;
+		text-shadow:0 -1px 0 #fff,
+					0 1px 0 #2e2e2e,
+					0 2px 0 #2c2c2c,
+					0 3px 0 rgba(0, 0, 0, 0.5);
+	}
+
+	.set #ran {
+		box-shadow: 0 1px 0 0px #424242, 0 1px 0 #060607 inset, 0px 2px 10px 0px black inset, 1px 0px 2px rgba(0, 0, 0, 0.4) inset, 0 0px 1px rgba(0, 0, 0, 0.6) inset;
+		background-color: #272728;
+		border-radius: 15px;
+		width: 150px;
+		height:5px;
+	}
+	.set span.ran{
+		margin-bottom: 5px;
+	}
+	.set span.pifu {
+		float: left;
+	}
+	.set img{
+		float: left;
+		margin:0 3px;
+		cursor: pointer;
+		border-radius: 50%;
+	}
+	.set img.active{
+		background-color: rgba(0,0,0,0.5);
+	}
+	#container .word .max .tip p{
+		text-align: left;
+		text-indent: 2em;
+	}
+	/*背景音乐*/
+	#bgm{
+		position: absolute;
+		left:-1000px;
+	}
+</style>
+<script>
+
+	$(function(){
+
+		setInterval(function(){
+			var _time = new Date();
+			var _date = _time.toGMTString();
+			$('.word .time').html(_date);
+		},500);
+
+		$('#set').click(function(){
+			$('.set').animate({
+				opacity:1
+			},500).siblings().animate({
+				opacity:0
+			},500);
+		});
+		$('#tip').click(function(){
+			$('.tip').animate({
+				opacity:1
+			},500).siblings().animate({
+				opacity:0
+			},500);
+		});
+
+		$('#sore').click(function(){
+			$('.sore').animate({
+				opacity:1
+			},500).siblings().animate({
+				opacity:0
+			},500);
+		});
+
+		//进入游戏:
+		$('#enter').click(function(){
+
+			//记录ID:
+			var _id = $('#id').val();
+			localStorage.setItem('my_id',_id);
+			location.href = './snake/index.html';
+		});
+
+		//设置bgm音量:
+		$('#ran').click(function(){
+			var _v = $(this).val()/100;
+			$('#bgm')[0].volume =_v;
+			localStorage.setItem('my_volume',_v);
+		});
+
+		/*
+		* 以下的设置,在人为点击的时候讲设置存在localstorage中:
+		* 若果没点击设置,讲使用sanke.js中的默认值!!
+		* */
+
+		//设置皮肤:
+		$('.set img').click(function(){
+			$(this).addClass('active').siblings().removeClass('active');
+			if($('.set img').index($(this)) ===0){
+				//皮肤1代表纯色
+				localStorage.my_pifu = "false";
+			}else localStorage.setItem('my_pifu',$(this).attr('src').slice(5));
+			console.log($(this).attr('src'));
+		});
+
+		//设置食物种类
+		$('input[name=food]').click(function(){
+			localStorage.setItem('my_food',$(this).val());
+		});
+
+		//是否穿墙:
+		$('input[name=wall]').click(function(){
+			localStorage.setItem('my_wall',$(this).val());
+		});
+
+		//难以程度 :
+		$('input[name=easy]').click(function(){
+			localStorage.setItem('my_easy',$(this).val());
+		});
+
+	});
+
+</script>
 </html>
