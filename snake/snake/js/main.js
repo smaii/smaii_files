@@ -19,16 +19,9 @@ define(function(require,exports,module){
 	// food.wave().born();
 	food.draw();
 
-
 	//snake 模块
     var snake = require('snake');
-    //fruit  绘制果实
 
-	//var fruit = require('fruit');
-	 //fruit.init();
-
-
-    // 主循环 帧率刷新
 	function loop(){
 		window.fps(loop);
 

@@ -24,6 +24,8 @@ define(function(require,exports,module){
 	//游戏音量:
 	var volume = localStorage.my_volume || 0.5;
 	$('#bgm')[0].volume = volume;
+	$('#hit')[0].volume = volume;
+	$('#death')[0].volume = volume;
 
 	var stepX =stepY = 0;
 
@@ -61,7 +63,7 @@ define(function(require,exports,module){
 	// });
 
 	var click = 0
-	_shot.onclick = function(){
+	_shot.addEventListener('touchstart',function(){
 		if(click == 0){
 			_this.size += 10;
 			_this.headSize +=10;
@@ -76,7 +78,7 @@ define(function(require,exports,module){
 			click = 0;
 		}
 
-	};
+	});
 
     var snake =function(size,headSize){
         this.MAX = 100;  //蛇的最大长度
@@ -102,6 +104,7 @@ define(function(require,exports,module){
 
 	};
 	var dead_count = 0;
+	var _span =[];
     snake.prototype.getHead =function(stepX,stepY) {
 
 		var stepX = stepX ||0;
@@ -136,27 +139,35 @@ define(function(require,exports,module){
 	    //遍历数组 判断距离:
 	    dead.map(function(value,index){
             var len = getLength(_this.headX[0][0],_this.headY[0][0],value[0],value[1]);
-            if(len<=(_this.size/2+food_info.size/2)) {
-	            (function (){
-		            //储存成绩:
-		            localStorage.sore = count;
-		            localStorage.time = new Date().toLocaleTimeString();
-	            })();
+            if(len<=(food_info.size/2)) {
+	            if(!(index in _span)){
+		            $("#death")[0].play();
+		            $("#death")[0].onplay = function(){
+			            _span.push(index);
+			            dead_count++;
+			            $('#main span').eq(index).animate({
+			            	opacity:0
+			            },500);
+			            _this.head.src = './src/images/head1.png';
+			            _this.body.src = './src/images/pifu5.png';
+			            $('#heart img').eq(3-dead_count).attr('src','./src/images/heart2.png');
+			            if(dead_count===3){
 
-            	// $('#main span').eq(index).animate({
-            	// 	'opacity':0
-	            // },1000,function(){
-		         //    dead_count++;
-		            //$('#main span').eq(index).attr({'display':'none'});
-		            // if(dead_count>=1){
-			            if(confirm('YOU Eat '+count+' !!!Try Again?')){
-				            stepX = stepY = 0;
-				            location.reload();
-			            }else{
-				            location.href = '../index.html';
+				            (function (){
+					            //储存成绩:
+					            localStorage.sore = count;
+					            localStorage.time = new Date().toLocaleTimeString();
+				            })();
+
+				            if(confirm('YOU Eat '+count+' !!!Try Again?')){
+					            stepX = stepY = 0;
+					            location.reload();
+				            }else{
+					            location.href = '../index.html';
+				            }
 			            }
-		            // }
-	            //});
+		            };
+	            }
 
             }
 	    });
@@ -175,25 +186,16 @@ define(function(require,exports,module){
 			if(stepX>_can1.width/2 && angle>-Math.PI*0.5 && angle < Math.PI*0.5){
 				//撞右边
 				stepX= -_can1.width/2-this.headSize/2;
-				_this.head.src = './src/images/head1.png';
-				_this.body.src = './src/images/pifu5.png';
-
 			}else if(stepX<-_can1.width/2 && Math.abs(angle)>Math.PI*0.5){
 				//撞左边
 				stepX = _can1.width/2+this.headSize/2;
-				_this.head.src = './src/images/head1.png';
-				_this.body.src = './src/images/pifu5.png';
 
 			}else if(stepY>_can1.height/2 && angle>0){
 				//撞下边
 				stepY = -_can1.height/2-this.headSize/2;
-				_this.head.src = './src/images/head1.png';
-				_this.body.src = './src/images/pifu5.png';
 			}else if(stepY<-_can1.height/2 && angle<0){
 				//撞上边
 				stepY = _can1.height/2+this.headSize/2;
-				_this.head.src = './src/images/head1.png';
-				_this.body.src = './src/images/pifu5.png';
 			}
 
 		}else{
@@ -217,6 +219,8 @@ define(function(require,exports,module){
 
 		var delLength = getLength(this.headX[0][0],this.headY[0][0],food_info.positionX,food_info.positionY);
 		if(delLength<=(this.size/2+food_info.size/2)){
+
+			$("#hit")[0].play();
 			count++;
 			_this.head.src = './src/images/head.png';
 			_this.body.src = pifu;

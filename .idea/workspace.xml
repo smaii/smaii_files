@@ -2,26 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="303d8308-1217-4d8f-a312-9d13d3ac751b" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snake/DEMO.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snake/snake/src/images/ball2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snake/snake/src/images/bg2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snake/snake/src/images/bullet.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snake/snake/src/images/choose.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snake/snake/src/images/dead.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snake/snake/src/images/fire1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snake/snake/src/images/fire2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snake/snake/src/images/fire3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snake/snake/src/mp3/陈一发儿 - 童话镇.mp3" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/snake/snake/js/load.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/snake/snake/public/jquery.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/snake/snake/public/jquery.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/snake/snake/public/touch.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/snake/snake/src/images/bg1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/snake/snake/src/images/candy0.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/snake/snake/src/images/candy1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/snake/snake/src/images/candy2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/snake/snake/src/images/candy3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/snake/snake/src/images/candy4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/snake/snake/src/images/candy5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/snake/snake/src/mp3/bgm1.mp3" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smaii_files" afterPath="$PROJECT_DIR$/smaii_files" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/snake/snake/src/images/bg5.jpg" afterPath="$PROJECT_DIR$/snake/snake/src/images/bg5.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/snake/snake/src/images/dead1.png" afterPath="$PROJECT_DIR$/snake/snake/src/images/dead1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/snake/snake/src/images/speed.png" afterPath="$PROJECT_DIR$/snake/snake/src/images/speed.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smaii_files/Demo.txt" afterPath="$PROJECT_DIR$/smaii_files/Demo.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/snake/index.html" afterPath="$PROJECT_DIR$/snake/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/snake/snake/css/index.css" afterPath="$PROJECT_DIR$/snake/snake/css/index.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/snake/snake/index.html" afterPath="$PROJECT_DIR$/snake/snake/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/snake/snake/js/bg.js" afterPath="$PROJECT_DIR$/snake/snake/js/bg.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/snake/snake/js/food.js" afterPath="$PROJECT_DIR$/snake/snake/js/food.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/snake/snake/js/main.js" afterPath="$PROJECT_DIR$/snake/snake/js/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/snake/snake/js/snake.js" afterPath="$PROJECT_DIR$/snake/snake/js/snake.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -43,8 +44,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/snake/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="516">
-              <caret line="338" column="0" lean-forward="true" selection-start-line="338" selection-start-column="0" selection-end-line="338" selection-end-column="0" />
+            <state relative-caret-position="246">
+              <caret line="294" column="17" lean-forward="false" selection-start-line="294" selection-start-column="17" selection-end-line="294" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -53,8 +54,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/snake/snake/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="433">
-              <caret line="26" column="7" lean-forward="true" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
+            <state relative-caret-position="342">
+              <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -63,18 +64,8 @@
       <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/snake/snake/css/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-288">
-              <caret line="14" column="20" lean-forward="false" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="load.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/snake/snake/js/load.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" column="18" lean-forward="true" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+            <state relative-caret-position="354">
+              <caret line="97" column="17" lean-forward="true" selection-start-line="97" selection-start-column="17" selection-end-line="97" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -93,8 +84,8 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/snake/snake/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+            <state relative-caret-position="183">
+              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -103,8 +94,8 @@
       <file leaf-file-name="bg.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/snake/snake/js/bg.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" column="44" lean-forward="false" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
+            <state relative-caret-position="144">
+              <caret line="8" column="27" lean-forward="true" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -113,10 +104,10 @@
       <file leaf-file-name="snake.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/snake/snake/js/snake.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="25" column="33" lean-forward="false" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
+            <state relative-caret-position="-107">
+              <caret line="293" column="16" lean-forward="false" selection-start-line="293" selection-start-column="16" selection-end-line="293" selection-end-column="16" />
               <folding>
-                <element signature="e#6555#6601#0" expanded="false" />
+                <element signature="e#6597#6643#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -125,10 +116,10 @@
       <file leaf-file-name="food.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/snake/snake/js/food.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
-              <caret line="47" column="39" lean-forward="true" selection-start-line="47" selection-start-column="39" selection-end-line="47" selection-end-column="39" />
+            <state relative-caret-position="360">
+              <caret line="20" column="20" lean-forward="false" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
               <folding>
-                <element signature="e#1870#1881#0" expanded="false" />
+                <element signature="e#1415#1426#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -165,14 +156,15 @@
         <option value="$PROJECT_DIR$/snake/js/snake.js" />
         <option value="$PROJECT_DIR$/my_site/css/public.css" />
         <option value="$PROJECT_DIR$/my_site/js/main.js" />
-        <option value="$PROJECT_DIR$/snake/snake/js/bg.js" />
         <option value="$PROJECT_DIR$/snake/start.html" />
-        <option value="$PROJECT_DIR$/snake/snake/js/food.js" />
-        <option value="$PROJECT_DIR$/snake/index.html" />
-        <option value="$PROJECT_DIR$/snake/snake/index.html" />
+        <option value="$PROJECT_DIR$/snake/snake/js/load.js" />
         <option value="$PROJECT_DIR$/snake/snake/css/index.css" />
+        <option value="$PROJECT_DIR$/snake/snake/index.html" />
         <option value="$PROJECT_DIR$/snake/snake/js/main.js" />
+        <option value="$PROJECT_DIR$/snake/snake/js/food.js" />
+        <option value="$PROJECT_DIR$/snake/snake/js/bg.js" />
         <option value="$PROJECT_DIR$/snake/snake/js/snake.js" />
+        <option value="$PROJECT_DIR$/snake/index.html" />
       </list>
     </option>
   </component>
@@ -186,8 +178,8 @@
     <handled-path value="$PROJECT_DIR$/app/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="55" />
-    <option name="y" value="16" />
+    <option name="x" value="87" />
+    <option name="y" value="19" />
     <option name="width" value="1196" />
     <option name="height" value="629" />
   </component>
@@ -414,15 +406,15 @@
       <workItem from="1491489316259" duration="35708000" />
       <workItem from="1492132351494" duration="70225000" />
       <workItem from="1492423404974" duration="54443000" />
-      <workItem from="1492544199435" duration="22468000" />
+      <workItem from="1492544199435" duration="33748000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="182844000" />
+    <option name="totallyTimeSpent" value="194124000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="55" y="16" width="1196" height="629" extended-state="1" />
+    <frame x="87" y="19" width="1196" height="629" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -464,14 +456,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/snake/snake/js/load.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="11" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/snake/snake/js/init.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -501,7 +485,7 @@
         <state relative-caret-position="2052">
           <caret line="114" column="13" lean-forward="true" selection-start-line="114" selection-start-column="13" selection-end-line="114" selection-end-column="13" />
           <folding>
-            <element signature="e#6555#6601#0" expanded="false" />
+            <element signature="e#6597#6643#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -511,7 +495,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#1870#1881#0" expanded="false" />
+            <element signature="e#1415#1426#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -577,7 +561,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding>
-            <element signature="e#6555#6601#0" expanded="false" />
+            <element signature="e#6597#6643#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -649,6 +633,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/my_site/css/media.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/snake/snake/js/load.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="11" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/snake/snake/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="97" column="17" lean-forward="true" selection-start-line="97" selection-start-column="17" selection-end-line="97" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/snake/snake/js/init.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -657,70 +665,54 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/snake/snake/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/snake/snake/js/bg.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="44" lean-forward="false" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
+        <state relative-caret-position="144">
+          <caret line="8" column="27" lean-forward="true" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/snake/snake/js/food.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="47" column="39" lean-forward="true" selection-start-line="47" selection-start-column="39" selection-end-line="47" selection-end-column="39" />
+        <state relative-caret-position="360">
+          <caret line="20" column="20" lean-forward="false" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
           <folding>
-            <element signature="e#1870#1881#0" expanded="false" />
+            <element signature="e#1415#1426#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/snake/snake/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="26" column="7" lean-forward="true" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/snake/snake/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-288">
-          <caret line="14" column="20" lean-forward="false" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/snake/snake/js/load.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="18" lean-forward="true" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/snake/snake/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/snake/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="516">
-          <caret line="338" column="0" lean-forward="true" selection-start-line="338" selection-start-column="0" selection-end-line="338" selection-end-column="0" />
+        <state relative-caret-position="246">
+          <caret line="294" column="17" lean-forward="false" selection-start-line="294" selection-start-column="17" selection-end-line="294" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/snake/snake/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/snake/snake/js/snake.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="25" column="33" lean-forward="false" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
+        <state relative-caret-position="-107">
+          <caret line="293" column="16" lean-forward="false" selection-start-line="293" selection-start-column="16" selection-end-line="293" selection-end-column="16" />
           <folding>
-            <element signature="e#6555#6601#0" expanded="false" />
+            <element signature="e#6597#6643#0" expanded="false" />
           </folding>
         </state>
       </provider>

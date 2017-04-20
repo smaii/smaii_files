@@ -80,8 +80,42 @@ html,body{
 	z-index:8;
 }
 
-#bgm{
+audio{
 	position: absolute;
 	left:-1000px;
+}
+#heart{
+	position: absolute;
+	right:0;
+	top:50%;
+	margin-top: -.45rem;
+	height:.9rem;
+	width:.28rem;
+}
+#heart img{
+	display: block;
+	height:.28rem;
+	width:.28rem;
+	opacity:0.4;
+	margin:0 .02rem;
+}
+
+
+@media only screen and (min-width: 600px) {
+	#joyDiv{
+		left: .2rem;
+		bottom: .2rem;
+		top:auto;
+	}
+	#speed{
+		bottom:.3rem;
+		right:.9rem;
+		left:auto;
+	}
+	#shot{
+		bottom:.9rem;
+		right:.3rem;
+		left: auto;
+	}
 }
 

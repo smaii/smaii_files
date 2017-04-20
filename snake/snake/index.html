@@ -8,9 +8,8 @@
     <title>SNAKE</title>
     <link rel="icon" href="src/images/ico.png">
     <link rel="stylesheet" type="text/css" href="css/index.css">
-	<script src="public/jquery.js"></script>
-    <script src="public/sea.js" type="text/javascript" charset="utf-8"></script>
-    <script src="js/load.js" type="text/javascript" charset="utf-8"></script>
+	<script src="http://apps.bdimg.com/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="public/sea.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
 
@@ -21,12 +20,28 @@
         <div id="joyDiv" ></div>
 		<div id="speed"></div>
 		<div id="shot" ></div>
-		<audio src="./src/mp3/bgm1.mp3" id="bgm" controls autoplay loop="loop"></audio>
+		<audio src="./src/mp3/音效-超级玛丽》地上关BGM1.mp3" id="bgm" autoplay loop="loop"></audio>
+		<audio src="./src/mp3/音效-清脆高频击中.mp3" id="hit"></audio>
+		<audio src="./src/mp3/音效-男人死亡倒地.mp3" id="death"></audio>
+		<div id="heart">
+			<img src="./src/images/heart.png" >
+			<img src="./src/images/heart.png" >
+			<img src="./src/images/heart.png" >
+		</div>
+
     </div>
 
 </body>
 <script>
+	seajs.config({
 
+//		alias:{
+//			'jquery':'../public/jquery.min.js'
+//		},
+		base:'./js'
+
+	});
+	seajs.use('main');
 
 </script>
 </html>

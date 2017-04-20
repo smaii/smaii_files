@@ -49,7 +49,7 @@ define(function(require,exports,module){
 			     var b = document.createElement('b');
 			     b.innerHTML = '<!--[if lte IE 8]><i></i><![endif]-->';
 			     return b.getElementsByTagName('i').length === 1;
-		     };
+		     }
 		     //定义雪花
 		     function CreateSnow(main,src,style){
 			     this.main = document.getElementById(main);//找到容器
@@ -64,7 +64,7 @@ define(function(require,exports,module){
 			     this.angleDelta=0.01*Math.random();
 			     this.speed=1.4+Math.random();//下落速度
 			     this.createEle(src);//制作雪花dom   凹=放在最后，使得原型里能取到值
-		     };
+		     }
 		     //雪片生成+下落
 		     CreateSnow.prototype = {
 			     createEle : function(baseSrc){//生成雪花元素
@@ -119,7 +119,7 @@ define(function(require,exports,module){
 						     snowArr[i].move();
 					     }
 				     }
-			     },40);
+			     },60);
 		     };
 		     //初始化加载
 		     (function (){

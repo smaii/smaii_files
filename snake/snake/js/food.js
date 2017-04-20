@@ -43,18 +43,6 @@ define(function(require,exports,module){
 		},
 
 		dead:function(){
-			// var img = new Image();
-			// img.src = './src/images/dead1.png';
-			// img.onload = function(){
-			// 	setInterval(function(){
-			// 		var _x = parseInt(_can1.width*Math.random());
-			// 		var _y = parseInt(_can1.height*Math.random());
-			// 		if(_can1.width - _x <32) positionX =_x-32;
-			// 		if(_can1.height - _y<32) positionY =_y-32;
-			// 		dead.push([_x,_y]);
-			// 		_ctx1.drawImage(img,_x,_y,food.size,food.size);
-			// 	},second);
-			// };
 
 			setInterval(function(){
 				var _x = parseInt(_can1.width*Math.random());

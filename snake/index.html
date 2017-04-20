@@ -54,12 +54,14 @@
 			</div>
 		</div>
 		<input type="text" placeholder="Input ID :" id="id">
-		<span id="enter">Enter Game</span>
+		<a id="enter" href="./snake/index.html">Enter Game</a>
+		<div id="writer">作者君 : smapustyle@gmail.com</div>
 		<span id="set"></span>
 		<span id="tip"></span>
 		<span id="sore"></span>
 		<!--bgm-->
-		<audio src="snake/src/mp3/bgm1.mp3" id="bgm" controls autoplay loop="loop"></audio>
+		<audio src="snake/src/mp3/音效-魂斗罗BGM%20remix.mp3" id="bgm" autoplay loop="loop"></audio>
+		<audio src="snake/src/mp3/音效-大锣.mp3" id="start"></audio>
 	</div>
 
 </body>
@@ -283,9 +285,23 @@
 		text-indent: 2em;
 	}
 	/*背景音乐*/
-	#bgm{
+	audio{
 		position: absolute;
 		left:-1000px;
+	}
+	#writer{
+		position: absolute;
+		bottom:.3rem;
+		right: .2rem;
+		color:black;
+		opacity:0.5;
+		text-shadow:
+				0 -1px 0 #fff,
+				0 1px 0 #2e2e2e,
+				0 2px 0 #2c2c2c,
+				0 3px 0 rgba(0, 0, 0, 0.5);
+		font-style: italic;
+
 	}
 </style>
 <script>
@@ -299,6 +315,7 @@
 		},500);
 
 		$('#set').click(function(){
+			$('#start')[0].play();
 			$('.set').animate({
 				opacity:1
 			},500).siblings().animate({
@@ -306,6 +323,7 @@
 			},500);
 		});
 		$('#tip').click(function(){
+			$('#start')[0].play();
 			$('.tip').animate({
 				opacity:1
 			},500).siblings().animate({
@@ -314,6 +332,7 @@
 		});
 
 		$('#sore').click(function(){
+			$('#start')[0].play();
 			$('.sore').animate({
 				opacity:1
 			},500).siblings().animate({
@@ -321,9 +340,9 @@
 			},500);
 		});
 
+		if(localStorage.my_id) $('#id').val(localStorage.my_id);
 		//进入游戏:
 		$('#enter').click(function(){
-
 			//记录ID:
 			var _id = $('#id').val() || '无名氏';
 			localStorage.setItem('my_id',_id);
